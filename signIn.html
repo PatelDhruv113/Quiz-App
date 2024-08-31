@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="style.css">
+ <!-- email === "quiz@gmail.com" 
+       password === "1234" -->
+</head>
+
+<body>
+    <div class="containeres">
+        <div class="title">Quiz App</div>
+        <div class="heading">SignIn</div>
+        <div class="contentes">
+            <form id="signInForm">
+                <div class="useres">
+                    <div class="input-boxes">
+                        <span class="details">Email</span>
+                        <input type="text" placeholder="Enter your Email" id="email" required>
+                    </div>
+                    <div class="input-boxes">
+                        <span class="details">Password</span>
+                        <input type="password" placeholder="Enter your Password" id="password" required>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="SIGNIN">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById("signInForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            
+            if (email === "quiz@gmail.com" && password === "1234") {
+                alert("Successful Login");
+                window.location.href = "subject.html"; 
+            } else {
+                alert("Wrong Information Provided!");  
+            }
+        });
+    </script>
+</body>
+</html>
